@@ -1,0 +1,74 @@
+<h1>welcome to employee list page</h1>
+
+<table border="1px">
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Contact</th>
+		<th>Email</th>
+		<th>Password</th>
+	</tr>
+
+	{% for nt in elist %}
+	<tr>
+		<td>{{nt[0]}}</td>
+		<td>{{nt[1]}}</td>
+		<td>{{nt[2]}}</td>
+		<td>{{nt[3]}}</td>
+		<td>{{nt[4]}}</td>
+	</tr>
+	
+	{% endfor %}
+
+
+
+
+</table>
+
+	<div>
+	<fieldset>
+		<h1>Delete user</h1>
+		<form method="POST" action="deleteEmp">
+			<table>
+				<tr>
+					<td>id</td>
+					<td><input type="text" name="id"></td>
+				</tr>
+
+				<tr>
+					<td><input type="submit" value="submit"></td>
+				</tr>
+			</table>
+	</fieldset>
+</div>
+
+<div>
+	<fieldset>
+		<h1>Update Employee</h1>
+		<form method="POST" action="updateEmp">
+			<table>
+				<tr>
+					<td>id</td>
+					<td><input type="text" name="id"></td>
+				</tr>
+					<td>Name</td>
+					<td><input type="text" name="name"></td>
+				<tr>
+					<td>Contact</td>
+					<td><input type="text" name="contact"></td>
+				</tr>
+				<tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email"></td>
+				</tr>
+				<tr>
+					<td>password</td>
+					<td><input type="password" name="paasw"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="submit"></td>
+				</tr>
+			</table>
+	</fieldset>
+</div>
